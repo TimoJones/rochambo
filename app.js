@@ -42,16 +42,16 @@ var game = () =>{
                cScore.innerHTML = computerScore;
                computerScore++;
                text.innerHTML = "You Lose! ";
-               text.style.color = 'red';
+               text.style.color = 'green';
                text2.innerHTML = text.innerHTML;
-               text2.style.color = 'red';
+               text2.style.color = 'green';
            }else if(showIcon.className === randomClasses[1] && computerShowIcon.className === randomClasses[2]){
                cScore.innerHTML = computerScore;
                computerScore++;
                text.innerHTML = "You Lose! ";
-               text.style.color = 'red';
+               text.style.color = 'green';
                text2.innerHTML = text.innerHTML;
-               text2.style.color = 'red';
+               text2.style.color = 'green';
            }else if(showIcon.className === randomClasses[1] && computerShowIcon.className === randomClasses[0]){
                pScore.innerHTML = playerScore;
                playerScore++;
@@ -63,9 +63,9 @@ var game = () =>{
                cScore.innerHTML = computerScore;
                computerScore++;
                text.innerHTML = "You Lose! ";
-               text.style.color = 'red';
+               text.style.color = 'green';
                text2.innerHTML = text.innerHTML;
-               text2.style.color = 'red';
+               text2.style.color = 'green';
            }else if(showIcon.className === randomClasses[2] && computerShowIcon.className === randomClasses[1]){
                pScore.innerHTML = playerScore;
                playerScore++;
