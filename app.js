@@ -25,9 +25,7 @@ nextImage = setInterval(function(){
     document.getElementById("img").src = images[currentPic]
 
 }, 1000)
-function stopInt() {
-    clearInterval(nextImage);
-}
+var time = setInterval(function() {clearInterval(nextImage)}, 4000)
 // Game Functionality: Setting forEach function for the buttons.
 var game = () =>{
     buttons.forEach(btn =>{
@@ -40,7 +38,7 @@ var game = () =>{
            callModal.style.visibility = "visible"; 
            hideModal 
            nextImage
-           stopInt()
+           time
            // Game Score.
            // If it's a Tie .
            if(showIcon.className === computerShowIcon.className){
