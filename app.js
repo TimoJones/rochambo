@@ -16,7 +16,7 @@ var images = ['/images/rock.jpg', '/images/paper.jpg','images/scissors.jpg','/im
 var currentPic = 0;
 nextImage = setInterval(function(){ 
     currentPic += 1
-    if(currentPic > images.length){
+    if(currentPic == images.length - 1){
         currentPic = 0
     }
     if(currentPic < 0){
@@ -25,6 +25,9 @@ nextImage = setInterval(function(){
     document.getElementById("img").src = images[currentPic]
 
 }, 1000)
+function stopInt() {
+    clearInterval(nextImage);
+}
 // Game Functionality: Setting forEach function for the buttons.
 var game = () =>{
     buttons.forEach(btn =>{
@@ -37,6 +40,7 @@ var game = () =>{
            callModal.style.visibility = "visible"; 
            hideModal 
            nextImage
+           stopInt()
            // Game Score.
            // If it's a Tie .
            if(showIcon.className === computerShowIcon.className){
