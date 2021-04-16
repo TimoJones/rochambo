@@ -10,7 +10,8 @@ var computerShowIcon = document.querySelector('.computer i');
 var randomClasses = ["far fa-hand-rock", "far fa-hand-paper","far fa-hand-scissors"];
 var text = document.getElementById('demo');
 var text2 = document.getElementById('demo2');
-
+var callModal = document.querySelector('.modal-bg');
+var hideModal = setInterval(function(){callModal.style.visibility = "hidden"}, 5000)
 // Game Functionality: Setting forEach function for the buttons.
 var game = () =>{
     buttons.forEach(btn =>{
@@ -20,6 +21,8 @@ var game = () =>{
            showIcon.className = clickedBtn;
            let randomNum = Math.floor(Math.random() * randomClasses.length);
            computerShowIcon.className = randomClasses[randomNum];
+           callModal.style.visibility = "visible"; 
+           hideModal 
            // Game Score.
            // If it's a Tie .
            if(showIcon.className === computerShowIcon.className){
@@ -32,7 +35,7 @@ var game = () =>{
            } 
           // if it's not a Tie.
            else if(showIcon.className === randomClasses[0] && computerShowIcon.className === randomClasses[2]){
-               pScore.innerHTML = playerScore;
+            pScore.innerHTML = playerScore;
                playerScore++;
                text.innerHTML = "You Win! ";
                text.style.color = 'purple';
