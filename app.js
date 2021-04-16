@@ -12,6 +12,19 @@ var text = document.getElementById('demo');
 var text2 = document.getElementById('demo2');
 var callModal = document.querySelector('.modal-bg');
 var hideModal = setInterval(function(){callModal.style.visibility = "hidden"}, 5000)
+var images = ['/images/rock.jpg', '/images/paper.jpg','images/scissors.jpg','/images/shoot.png']
+var currentPic = 0;
+nextImage = setInterval(function(){ 
+    currentPic += 1
+    if(currentPic > images.length){
+        currentPic = 0
+    }
+    if(currentPic < 0){
+        currentPic = images.length - 1
+    }
+    document.getElementById("img").src = images[currentPic]
+
+}, 1000)
 // Game Functionality: Setting forEach function for the buttons.
 var game = () =>{
     buttons.forEach(btn =>{
@@ -23,6 +36,7 @@ var game = () =>{
            computerShowIcon.className = randomClasses[randomNum];
            callModal.style.visibility = "visible"; 
            hideModal 
+           nextImage
            // Game Score.
            // If it's a Tie .
            if(showIcon.className === computerShowIcon.className){
