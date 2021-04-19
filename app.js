@@ -23,7 +23,6 @@ nextImage = setInterval(function(){
         currentPic = images.length - 1
     }
     document.getElementById("img").src = images[currentPic]
-
 }, 1000)
 var time = setInterval(function() {clearInterval(nextImage)}, 4000)
 // Game Functionality: Setting forEach function for the buttons.
