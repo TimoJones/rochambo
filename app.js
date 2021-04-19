@@ -19,7 +19,7 @@ nextImage = setInterval(function(){
     if(currentPic == images.length - 1){
         currentPic = 0
     }
-    if(currentPic < 0){
+    if(currentPic = 0){
         currentPic = images.length += 1
     }
     document.getElementById("img").src = images[currentPic]
