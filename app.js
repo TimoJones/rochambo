@@ -13,7 +13,7 @@ var text2 = document.getElementById('demo2');
 var callModal = document.querySelector('.modal-bg');
 var hideModal = setInterval(function(){callModal.style.visibility = "hidden"}, 5000)
 var images = ['/images/rock.jpg', '/images/paper.jpg','images/scissors.jpg','/images/shoot.png']
-var currentPic = 1;
+var currentPic = 0;
 nextImage = setInterval(function(){ 
     currentPic += 1
     if(currentPic == images.length - 1){
